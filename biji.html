@@ -1,0 +1,34 @@
+1.引入flexible库(flexible.js和flexible_css.js)，这两个引入要放在utf-8下，title上
+2.引入base
+3.建立自己页面的样式表
+
+
+
+
+
+2.iphone6 dpr=2 1rem=75px
+	宽高用rem作为单位
+	宽度用百分比，高度用固定
+	字体大小单位还是用px,移动端字号最小是12px
+	[data-dpr="2"] .cart span{
+	font-size: 20px;
+}
+[data-dpr="3"] .cart span{
+	font-size: 30px;
+}
+
+
+装备插件cssrem
+Builder-移动端测试环境
+box-sizing带着边算高度
+    height: 1.333333rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-top:1px solid #bfbec3;
+这里的border-top  1像素的高包含在了height：1.333333rem
+background-size:contain意识是让图片冲慢整个容器
+大图往小的放用contain，小图往大的放cover
+background: url(img/p-1.png) 0 0/contain no-repeat;在位置后面斜杠写图片大小位置
+
+图超出屏幕边框而不换行,是需要在盒子里设置一个盒子让这个盒子边框
